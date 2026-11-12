@@ -17,13 +17,32 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-urlpatterns = [
-    path("admin/", admin.site.urls),
 
-    path("api/rooms/", include("rooms.urls")),
+urlpatterns = [
+
+    path(
+        "admin/",
+        admin.site.urls
+    ),
+
+    path(
+        "api/rooms/",
+        include("rooms.urls")
+    ),
 
     path(
         "api/reservations/",
         include("reservations.urls")
     ),
+
+    path(
+        "api/payments/",
+        include("payments.urls")
+    ),
+
+    path(
+        "api/notifications/",
+        include("notifications.urls")
+    ),
+
 ]

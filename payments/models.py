@@ -6,6 +6,7 @@ class Payment(models.Model):
     STATUS_CHOICES = [
         ("Success", "Success"),
         ("Failed", "Failed"),
+        ("Pending", "Pending"),
     ]
 
     reservation = models.OneToOneField(
